@@ -1,0 +1,151 @@
+<div id="layoutSidenav_content">
+  <main class="mainButtons">
+    <div class="container-fluid px-4">
+      <br>
+      <h1 class="font-weight-bold text-white text-center">Datos de la empresa</h1>
+      <div class="row">
+        <div class="col-xl-3 col-md-6">
+          <div class="card text-black mb-4" id="card1">
+            <div class="card-body">Total empleados</div>
+            <div class="card-footer d-flex align-items-center justify-content-between">
+              <p>{{totalEmpleados}}</p>
+              <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="card text-black mb-4" id="card5">
+            <div class="card-body">Total areas</div>
+            <div class="card-footer d-flex align-items-center justify-content-between">
+              <p>{{totalAreas}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          
+          <div class="card text-black mb-4" id="card4">
+            <div class="input-group">
+              <input class="form-control" type="text" #nameInput>
+              <button class="btn btn-primary" (click)="findAmountOfEmployeesByName(nameInput.value)">🔍︎</button>  
+            </div>  
+            <div class="card-body">Por nombre de empleado
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              {{totalEmpleadosNombre}}
+              <br><br>
+            </div>
+            
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="card text-black mb-4" id="card7">
+            <div class="input-group">
+              <input class="form-control" type="number" #stateInput>
+              <button class="btn btn-primary" (click)="findAmountOfUsersAndAreasByState(+stateInput.value)">🔍︎</button>
+            </div>
+            <div class="card-body">Por estado (0-1-2)
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              {{totalEstado}}
+              <br><br>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="card text-black mb-4" id="card2">
+            <div class="card-body">Empleados activos</div>
+            <div class="card-footer d-flex align-items-center justify-content-between">
+              <p>{{totalEmpleadosActivos}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="card text-black mb-4" id="card6">
+            <div class="card-body">Areas activas</div>
+            <div class="card-footer d-flex align-items-center justify-content-between">
+              <p>{{totalAreasActivas}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="card text-black mb-4" id="card7">
+            <div class="input-group">
+              <input class="form-control" type="text" #salaryInput>
+              <button class="btn btn-primary" (click)="findAmountOfUsersBySalary(+salaryInput.value)">🔍︎</button>  
+            </div>
+            <div class="card-body">Por salario
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              {{totalEmpleadosSalario}}
+              <br><br>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="card text-black mb-4" id="card7">
+            <div class="input-group">
+              <input class="form-control" type="number" #ageInput>
+              <button class="btn btn-primary" (click)="findAmountOfUsersByAge(+ageInput.value)">🔍︎</button>
+            </div>
+            <div class="card-body">Por edad
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              {{totalEmpleadosEdad}}
+              <br><br>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="card text-black mb-4" id="card3">
+            <div class="card-body">Empleados inactivos</div>
+            <div class="card-footer d-flex align-items-center justify-content-between">
+              <p>{{totalEmpleadosInactivos}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="card text-black mb-4" id="card7">
+            <div class="card-body">Areas inactivas</div>
+            <div class="card-footer d-flex align-items-center justify-content-between">
+              <p>{{totalAreasInactivas}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="card text-black mb-4" id="card7">
+            <div class="input-group">
+              <input class="form-control" type="number" #numberDocumentInput>
+              <button class="btn btn-primary" (click)="findAmountOfUsersByNumberDocument(+numberDocumentInput.value)">🔍︎</button>
+            </div>
+            <div class="card-body">Por numero de documento
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              {{totalEmpleadoNumberDocument}}
+              <br><br>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="card text-black mb-4" id="card7">
+            <div class="input-group">
+              <input class="form-control" type="text" #nameAreaInput>
+              <button class="btn btn-primary" (click)="findAmountOfAreasByName(nameAreaInput.value)">🔍︎</button>
+            </div>
+            <div class="card-body">Por nombre de area
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;
+              {{totalNombreArea}}
+              <br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

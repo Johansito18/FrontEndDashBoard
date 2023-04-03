@@ -26,6 +26,7 @@ export class DashboardService {
     return this.http.post<User>(`${this.apiUrlUsers}saveUser`, modelo);
   }
   
+  //FILTROS
   findAllByEmployeeRol():Observable<User>{
     return this.http.get<User>(`${this.apiUrlUsers}findAllByEmployeeRol`);
   }

@@ -25,19 +25,24 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatGridListModule} from '@angular/material/grid-list';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
-
-import { CrudUsersComponent } from './crudUsers/crudUsers.component';
-import { CrudAreasComponent } from './crudAreas/crudAreas.component';
-
+import { CrudAreasComponent } from './components/crudAreas/crudAreas.component';
+import { CrudUsersComponent } from './components/crudUsers/crudUsers.component';
+import { RouterModule } from '@angular/router';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { DialogAddEditUserComponent } from './components/DialogAddEditUser/DialogAddEditUser.component';
 
 
 
 @NgModule({
   declarations: [		
     AppComponent,
-    CrudAreasComponent
+    CrudAreasComponent,
+    CrudUsersComponent,
+    NavbarComponent,
+    DialogAddEditUserComponent
    ],
   imports: [
+    RouterModule,
     MatToolbarModule,
     BrowserModule,
     AppRoutingModule,
@@ -57,7 +62,8 @@ import { CrudAreasComponent } from './crudAreas/crudAreas.component';
     MatDialogModule,
     MatIconModule,
     MatSnackBarModule,
-    MatCardModule
+    MatCardModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
